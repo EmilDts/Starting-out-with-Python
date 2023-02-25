@@ -1,10 +1,10 @@
 import math
 
 # Exercise 1
-# Hard way:
 radians = float(input("Введите градусы для конвертации в радианы: "))
 degrees = float(input("Введите радианы для конвертации в градусы: "))
 
+# Hard way:
 radians_calculate = (radians * math.pi) / 180
 degrees_calculate = (degrees * 180) / math.pi
 
