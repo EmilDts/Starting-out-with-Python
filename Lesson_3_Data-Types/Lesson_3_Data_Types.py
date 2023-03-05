@@ -1,15 +1,20 @@
 line = str(input("Введите вашу строку: \n"))
+lower_one = line.lower()
 
-line_replace = str(input('Какое слово вы хотите заменить?: '))
-position = line.find(line_replace)
+line_old = str(input('Какое слово вы хотите заменить?: '))
+lowe_two = line_old.lower()
+position = lower_one.find(lowe_two)
 
-print(f'{line_replace} находится на позиции {position}')
+print(f'{lowe_two} находится на позиции: {position}')
+
 line_new = str(input("Слово для замены: "))
+lower_three = line_new.lower()
 
-form = line.replace(line_replace, line_new)
+line_replace = lower_one.replace(lowe_two, lower_three)
 
-form_strip = form.strip('.,-:;?!')
+line_strip = line_replace.strip('.,-:;?!')
 
-form_lower = form_strip.lower()
+print(f'{line_strip}')
 
-print(form_lower.lstrip())
+
+
