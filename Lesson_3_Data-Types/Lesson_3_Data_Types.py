@@ -12,9 +12,7 @@ lower_three = line_new.lower()
 
 line_replace = lower_one.replace(lowe_two, lower_three)
 
-line_strip = line_replace.strip('.,-:;?!')
+crutch_one = line_replace.replace('.', ' ').replace(',', ' ').replace('-', ' ').replace(':', ' ')
+crutch_two = crutch_one.replace(';', ' ').replace('?', ' ').replace('!', ' ')
 
-print(f'{line_strip}')
-
-
-
+print(crutch_two.strip())
