@@ -38,3 +38,15 @@ if set(answer_three) & set(line_three_s):
         print("Брат, я немного занят сейчас, но очень интересно! ")
 else:
     print("Что, прости? ")
+
+line_four = str(input())
+line_four_s = line_four.strip("!;?:,.()").lower().split()
+
+answer_four = ["пока", "до завтра", "до свидания", "увидимся", "до встречи", "спокойной ночи"]
+
+if set(answer_four) & set(line_four_s):
+    print("До встречи в сети! ")
+else:
+    print("Все равно ничего не понял... ")
+
+exit()
