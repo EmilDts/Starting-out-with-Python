@@ -1,12 +1,23 @@
+# We ask the user for a string, which we turn into a list:
 line = str(input()).strip("!;?:,.()").lower().split()
 
+# Set a ready-made list template:
 answer = ["привет", "хай", "здарова", "добрый день", "добрый вечер", "здравствуйте"]
 
+# With a "while" loop, we compare two lists for keywords:
 while not set(answer) & set(line):
+
+    # If there are no keywords then please enter the line again:
+
     print("Брат, я ничего не понимаю( ")
     line = str(input()).strip("!;?:,.()").lower().split()
 else:
+
+    # If there are such words, then we continue the execution of the program in the same way:
+
     print("Здравствуй, я бот с Украины! ")
+
+# We repeat the above:
 
 line_two = str(input()).strip("!;?:,.()").lower().split()
 
@@ -34,7 +45,7 @@ else:
         print("Брат, я немного занят сейчас, но могу посоветовать тебе сходить на 'The Hateful Eight' ")
     elif line_three.count("хобби") >= 1:
         print("Брат, я немного занят сейчас, но могу посоветовать тебе такое хобби, как 'Warhammer' ")
-    elif line_three.count("кинотеатр") >= 1:
+    elif line_three.count("делаю") >= 1:
         print("Брат, я немного занят сейчас, давай потом ")
     else:
         print("Брат, я немного занят сейчас, но очень интересно! ")
