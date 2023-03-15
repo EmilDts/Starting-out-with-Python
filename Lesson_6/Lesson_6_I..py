@@ -1,7 +1,7 @@
-list = str(input("Введите вашу строку: ")).strip("!;?:,.() \n\t").lower()
+line = str(input("Введите вашу строку: ")).strip("!;?:,.() \n\t").lower()
 
-while not list == list[::-1]:
-    print(f'Строка "{list.capitalize()}" не является палиндромом "{list[::-1].capitalize()}"')
-    list = str(input("Введите вашу строку: ")).strip("!;?:,.()").lower()
+while not line == list[::-1]:
+    print(f'Строка "{line.capitalize()}" не является палиндромом "{line[::-1].capitalize()}"')
+    line = str(input("Введите вашу строку: ")).strip("!;?:,.()").lower()
 else:
-    print(f'Строка "{list.capitalize()}" является палиндромом "{list[::-1].capitalize()}"')
+    print(f'Строка "{line.capitalize()}" является палиндромом "{line[::-1].capitalize()}"')
