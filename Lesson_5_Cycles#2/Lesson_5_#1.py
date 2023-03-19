@@ -2,11 +2,12 @@ line = float(input("Введите числа для подсчета. Когд�
 
 memory = []
 
-while type(line) == float:
-    memory.append(line)
-    line = float(input("Еще: \n"))
-else:
-    if line == "sum":
-        print(sum(memory))
-    else:
-        print("Некорректный ввод")
+while True:
+    while type(line) == float:
+        try:
+            memory.append(line)
+            line = float(input("Еще: \n"))
+        except ValueError:
+            print(sum(memory))
+            exit()
+
