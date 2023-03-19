@@ -20,6 +20,7 @@ def degrees_conversion():
 
 
 if __name__ == '__main__':
+
     print("""
     Привет!\n
     Это программа для преобразования.\n
@@ -29,11 +30,12 @@ if __name__ == '__main__':
 
     renpy = str(input()).lower()
 
-    while not renpy == "радианы" or renpy == "градусы":
-        print("Выбери из списка!")
-        renpy = input().lower()
-    else:
-        if renpy == "радианы":
-            print(radians_conversion())
+    while True:
+        while renpy == "радианы":
+            print(exit(radians_conversion()))
         else:
-            print(degrees_conversion())
+            while renpy == "градусы":
+                print(exit(degrees_conversion()))
+            else:
+                print("Выбери из списка!")
+                renpy = str(input()).lower()
