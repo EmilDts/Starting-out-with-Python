@@ -1,6 +1,8 @@
+# Importing the 'math' library for our task:
 import math
 
 
+# Create a function to convert degrees to radians:
 def radians_conversion():
     while True:
         try:
@@ -10,6 +12,7 @@ def radians_conversion():
             print("Вы ввели не градусы! ")
 
 
+# Create a function to convert radians to degrees:
 def degrees_conversion():
     while True:
         try:
@@ -19,6 +22,7 @@ def degrees_conversion():
             print("Вы ввели не радианы! ")
 
 
+# An unnecessary part of the code that will not be executed when calling the functions above:
 if __name__ == '__main__':
 
     print("""
@@ -28,6 +32,7 @@ if __name__ == '__main__':
     Если ты хочешь переобразовать градусы в радианы, то напиши 'градусы'.\n
     """)
 
+    # The user enters a value that, when tested for a specific result, returns the value to the function:
     renpy = str(input()).lower()
 
     while True:
