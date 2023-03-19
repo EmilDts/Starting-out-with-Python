@@ -1,12 +1,12 @@
-numbers = input("Введите числа для подсчета. Когда закончите, то введите ключевое слово 'sum'. \n").lower()
+line = float(input("Введите числа для подсчета. Когда закончите, то введите ключевое слово 'sum'. \n"))
 
 memory = []
 
-while isinstance(numbers, int) or isinstance(numbers, float) :
-    memory.append(numbers)
-    numbers = input("Еще \n").lower()
+while type(line) == float:
+    memory.append(line)
+    line = float(input("Еще: \n"))
 else:
-    if numbers != "sum":
-        print("Некорректный ввод")
-    else:
+    if line == "sum":
         print(sum(memory))
+    else:
+        print("Некорректный ввод")
