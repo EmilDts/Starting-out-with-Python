@@ -18,9 +18,13 @@ def perimeter():
 
 
 def area():
-    semi_p = perimeter() / 2
-    s = math.sqrt(semi_p * (semi_p - a) * (semi_p - b) * (semi_p - c))
-    return float(s)
+    while True:
+        try:
+            semi_p = perimeter() / 2
+            s = math.sqrt(semi_p * (semi_p - a) * (semi_p - b) * (semi_p - c))
+            return float(s)
+        except ValueError:
+            exit(print("Немыслимо..."))
 
 
 if __name__ == '__main__':
