@@ -25,22 +25,22 @@ def degrees_conversion():
 # An unnecessary part of the code that will not be executed when calling the functions above:
 if __name__ == '__main__':
 
-    print("""
-    Привет!\n
-    Это программа для преобразования.\n
-    Если ты хочешь переобразовать радианы в градусы, то напиши 'радианы'.\n.
-    Если ты хочешь переобразовать градусы в радианы, то напиши 'градусы'.\n
-    """)
+    print("""Привет!
+Это программа для преобразования.
+Если ты хочешь переобразовать радианы в градусы, то напиши 'радианы'.
+Если ты хочешь переобразовать градусы в радианы, то напиши 'градусы'.""")
 
     # The user enters a value that, when tested for a specific result, returns the value to the function:
     renpy = str(input()).lower()
 
     while True:
         while renpy == "радианы":
-            print(exit(radians_conversion()))
+            print(radians_conversion())
+            exit()
         else:
             while renpy == "градусы":
-                print(exit(degrees_conversion()))
+                print(degrees_conversion())
+                exit()
             else:
                 print("Выбери из списка!")
                 renpy = str(input()).lower()
